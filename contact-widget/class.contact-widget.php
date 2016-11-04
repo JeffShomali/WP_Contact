@@ -15,9 +15,9 @@ class Contact_Widget extends WP_Widget{
 	  *	Frontend Display
 	  */
   	 public function widget($args, $instance){
-		$title 		= apply_filters( 'widget_title', $instance['title'] );
-		$recipient 	= $instance['recipient'];
-		$subject 	= $instance['subject'];
+		$title 	 = apply_filters( 'widget_title', $instance['title'] );
+		$recipient = $instance['recipient'];
+		$subject 	 = $instance['subject'];
 
 		echo $args['before_widget'];
 		if(!empty($title))
@@ -97,4 +97,4 @@ class Contact_Widget extends WP_Widget{
 		//Return Outpur String
 		return $output;
 		}
-}	
+}

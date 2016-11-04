@@ -23,7 +23,7 @@ jQuery(document).ready(function(){
           }).done(function(response){
                //Make sure sent was success
                jQuery(formMessages).removeClass('error');
-               jQuery(formMessages).addClass('error');
+               jQuery(formMessages).addClass('success');
 
                //Set Message Text
                jQuery(formMessages).text(response);
@@ -36,6 +36,13 @@ jQuery(document).ready(function(){
                //Make sure sent was not successfull
                jQuery(formMessages).removeClass('error');
                jQuery(formMessages).addClass('error');
+
+               //Set Message Text
+               if(data.responseText !== '') {
+                    jQuery(formMessages).text(data.response);
+               }else {
+                    jQuery(formMessages).text('There is some errors');
+               }
           });
      });
 });
